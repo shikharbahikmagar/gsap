@@ -16,8 +16,6 @@ string.addEventListener('mousemove', function(dets) {
         duration: 0.2,
         ease: "power3.out"
     })
-
-
 });
 
 string.addEventListener('mouseleave', function() {
