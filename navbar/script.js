@@ -18,7 +18,7 @@ tl.from("#full h1", {
 
     opacity: 0,
     x: 150,
-    duration: 0.4,
+    duration: 0.5,
     stagger: 0.2,
 })
 
