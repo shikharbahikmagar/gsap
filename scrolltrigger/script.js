@@ -16,13 +16,11 @@ gsap.to("#box1", {
 })
 
 gsap.from("#box2", {
-   
     scale: 0,
     duration: 1,
     delay: 1,
     rotation: 360,
     scrollTrigger: {
-
         trigger: "#page2 #box2",
         scroller: "body",
         markers: true,
@@ -42,7 +40,6 @@ gsap.from("#box3", {
     delay: 1,
     rotation: 360,
     scrollTrigger: {
-
         trigger: "#page3 #box3",
         scroller: "body",
         markers: true,
