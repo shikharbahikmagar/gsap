@@ -99,7 +99,8 @@ function Header() {
 
   return (
     <>
-     <ContactModal />
+
+    <ContactModal />
 
     <div className="bg-cover bg-center !w-screen h-screen overflow-hidden" style={{ backgroundImage: `url(${hero_bg})` }}>
            
@@ -108,15 +109,15 @@ function Header() {
       {/* contact modal */}
 
       
-      <div id='hero_text' className='flex absolute z-5' style={{top: '35%', left: '15%'}}>
-        <h1 className='text-[14rem] font-playfair antialiased text-teal-100 leading-relaxed font-black tracking-widest'>G</h1>
-        <h1 className='text-[14rem] font-playfair antialiased text-teal-100 leading-relaxed font-black tracking-widest'>R</h1>
-        <h1 className='text-[14rem] font-playfair antialiased text-teal-100 leading-relaxed font-black tracking-widest'>O</h1>
-        <h1 className='text-[14rem] font-playfair antialiased text-teal-100 leading-relaxed font-black tracking-widest'>W</h1>
+      <div id='hero_text' className='flex fixed z-5 top-[45%] left-[5%] md:top-[38%] md:left-[12%] lg:top-[38%] lg:left-[15%]'>
+        <h1 className='text-[7rem] md:text-[10rem] lg:text-[14rem] font-playfair antialiased text-teal-100 leading-relaxed font-black tracking-[25px] md:tracking-widest'>G</h1>
+        <h1 className='text-[7rem] md:text-[10rem] lg:text-[14rem] font-playfair antialiased text-teal-100 leading-relaxed font-black tracking-[25px] md:tracking-widest'>R</h1>
+        <h1 className='text-[7rem] md:text-[10rem] lg:text-[14rem] font-playfair antialiased text-teal-100 leading-relaxed font-black tracking-[25px] md:tracking-widest'>O</h1>
+        <h1 className='text-[7rem] md:text-[10rem] lg:text-[14rem] font-playfair antialiased text-teal-100 leading-relaxed font-black tracking-[25px] md:tracking-widest'>W</h1>
       </div>
 
-      <div id='hero_plant' className='plant z-15 absolute' style={{top: '43%', left: '30%'}}>
-        <img src={plant} alt="" className='h-96 opacity-96' />
+      <div id='hero_plant' className='plant z-15 fixed top-[47%] left-[20%] md:top-[40%] md:left-[25%] lg:top-[43%] lg:left-[30%]'>
+        <img src={plant} alt="" className='h-60 lg:h-96 md:h-80 opacity-96' />
       </div>
 
     
@@ -125,47 +126,54 @@ function Header() {
       <div id="nav" className="relative z-20 flex justify-between items-center p-4 md:p-5 md:pl-20 md:pr-20">
         {/* Logo */}
 
-        <div id="logo" className="">
+        <div id="logo" className="cursor-pointer">
             <img src={logo} alt="" className='h-20'  />
         </div>
 
 
-        {/* <div id="search" className="hidden md:block ml-auto text-white text-2xl"><input type="text" placeholder='search' className='bg-transparent border-2 focus:text-md focus:border-cyan-950 border-cyan-500 placeholder:text-md rounded-md justify-center text-center'/>
+        {/* <div id="search" className="hidden md:block ml-auto text-white text-2xl"><input type="text" placeholder='search' className='bg-transparent border-2 focus:text-md focus:border-cyan-950 border-cyan-500 placeholder:text-md rounded-md justify-center text-[1rem]nter'/>
         </div> */}
 
 
         {/* Nav Links */}
-        <div id="contact" className="md:ml-auto md:mr-52 text-white text-2xl">
+        <div id="contact" className="md:ml-auto md:mr-52 cursor-pointer text-white text-2xl">
            <button onClick={() => {dispatch(openModal()); }} className="bg-teal-500 p-1 pl-4 pr-4 rounded-lg hover:bg-teal-800 hover:duration-1000">Contact</button>
         </div>
         {/* Menu Icon */}
         <i id="menu-icon" onClick={() => { setMenuOpen(!menuOpen);
-        }} className='ri-menu-3-line text-teal-500 text-3xl hover:text-teal-800 hover:duration-1000'></i>
+        }} className='ri-menu-3-line cursor-pointer text-teal-500 text-3xl hover:text-teal-800 hover:duration-1000'></i>
       </div>
 
       {/* vertical nav bar */}
       <div id='vertical-nav' className='backdrop-blur-lg z-20 fixed right-0 top-0 lg:w-[500px] h-full overflow-y-auto'>
 
         <i onClick={() => { setMenuOpen(!menuOpen);
-        }} className='ri-close-circle-fill absolute top-10 right-10 text-teal-500 text-3xl hover:text-teal-800 hover:duration-1000'></i>
+        }} className='ri-close-circle-fill cursor-pointer absolute top-10 right-10 text-teal-500 text-3xl hover:text-teal-800 hover:duration-1000'></i>
 
-        <ul id='nav-links' className='flex flex-col gap-12 m-10 text-left pt-20 text-white text-2xl'>
-            <li className='border rounded-lg border-teal-500'>
-              <h1 className='p-2 border border-teal-500 text-center cursor-pointer rounded-lg hover:bg-teal-800 transition-all duration-1000 hover:duration-1000'>HOME</h1>
-              <p className='p-4 text-sm'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam corrupti quae placeat ea et nemo rem? Minima possimus necessitatibus cupiditate debitis earum cum, veritatis, repellendus pariatur perspiciatis ducimus quidem ipsa.</p>
-            </li>
-            <li className='border rounded-lg border-teal-500'>
-              <h1 className='p-2 border border-teal-500 text-center cursor-pointer rounded-lg hover:bg-teal-800 transition-all duration-1000 hover:duration-1000'>HOME</h1>
-              <p className='p-4 text-sm'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam corrupti quae placeat ea et nemo rem? Minima possimus necessitatibus cupiditate debitis earum cum, veritatis, repellendus pariatur perspiciatis ducimus quidem ipsa.</p>
-            </li>
-            <li className='border rounded-lg border-teal-500'>
-              <h1 className='p-2 border border-teal-500 text-center cursor-pointer rounded-lg hover:bg-teal-800 transition-all duration-1000 hover:duration-1000'>HOME</h1>
-              <p className='p-4 text-sm'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam corrupti quae placeat ea et nemo rem? Minima possimus necessitatibus cupiditate debitis earum cum, veritatis, repellendus pariatur perspiciatis ducimus quidem ipsa.</p>
-            </li>
-            <li className='border rounded-lg border-teal-500'>
-              <h1 className='p-2 border border-teal-500 text-center cursor-pointer rounded-lg hover:bg-teal-800 transition-all duration-1000 hover:duration-1000'>HOME</h1>
-              <p className='p-4 text-sm'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam corrupti quae placeat ea et nemo rem? Minima possimus necessitatibus cupiditate debitis earum cum, veritatis, repellendus pariatur perspiciatis ducimus quidem ipsa.</p>
-            </li>
+        <ul id='nav-links' className='flex flex-col gap-12 mt-8 m-6 p-10 text-left pt-20 text-white text-2xl'>
+        <li className='border rounded-lg border-teal-500 group'>
+          <h1 className='text-teal-300 p-2 font-serif tracking-wider uppercase border md:text-[1.2rem] hover:text-teal-100 border-teal-500 text-center cursor-pointer rounded-lg hover:bg-teal-800 transition-all duration-500'>Home <span><i class="group-hover:text-teal-100 transition-all duration-500 text-teal-500 ri-home-4-line"></i></span></h1>
+          <p className='p-6 text-center text-[1rem] text-teal-100'>Discover our mission to celebrate and protect the wonders of nature.</p>
+          </li>
+
+          <li className='border rounded-lg border-teal-500 group'>
+            <h1 className='text-teal-300 p-2 font-serif tracking-wider uppercase border md:text-[1.2rem] hover:text-teal-100 border-teal-500 text-center cursor-pointer rounded-lg hover:bg-teal-800 transition-all duration-500'>Conservation <span><i class="group-hover:text-teal-100 transition-all duration-500 text-teal-500 ri-seedling-line"></i>
+            </span></h1>
+            <p className='p-4 text-center text-[1rem] text-teal-100'>Learn about our efforts to preserve biodiversity and natural habitats.</p>
+          </li>
+
+          <li className='border rounded-lg border-teal-500 group'>
+            <h1 className='text-teal-300 p-2 font-serif tracking-wider uppercase border md:text-[1.2rem] hover:text-teal-100 border-teal-500 text-center cursor-pointer rounded-lg hover:bg-teal-800 transition-all duration-500'>Sustainability <span><i class="group-hover:text-teal-100 transition-all duration-500 text-teal-500 ri-recycle-line"></i>
+            </span></h1>
+            <p className='p-4 text-center text-[1rem] text-teal-100'>Join us in adopting sustainable practices to protect the Earth.</p>
+          </li>
+
+          <li className='border rounded-lg border-teal-500 group'>
+            <h1 className='text-teal-300 p-2 font-serif tracking-wider uppercase border md:text-[1.2rem] hover:text-teal-100 border-teal-500 text-center cursor-pointer rounded-lg hover:bg-teal-800 transition-all duration-500'>Wild-Life <span><i class="group-hover:text-teal-100 transition-all duration-500 text-teal-500 ri-bear-smile-line"></i>
+            </span></h1>
+            <p className='p-4 text-center text-[1rem] text-teal-100'>Explore the diverse species that inhabit our planet and how to protect them.</p>
+          </li>
+
         </ul>
       </div>
     </div>
