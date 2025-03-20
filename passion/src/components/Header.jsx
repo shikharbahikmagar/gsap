@@ -109,14 +109,14 @@ function Header() {
       {/* contact modal */}
 
       
-      <div id='hero_text' className='flex fixed z-5 top-[45%] left-[5%] md:top-[38%] md:left-[12%] lg:top-[38%] lg:left-[15%]'>
+      <div id='hero_text' className='flex absolute z-5 top-[45%] left-[5%] md:top-[38%] md:left-[12%] lg:top-[38%] lg:left-[15%]'>
         <h1 className='text-[7rem] md:text-[10rem] lg:text-[14rem] font-playfair antialiased text-teal-100 leading-relaxed font-black tracking-[25px] md:tracking-widest'>G</h1>
         <h1 className='text-[7rem] md:text-[10rem] lg:text-[14rem] font-playfair antialiased text-teal-100 leading-relaxed font-black tracking-[25px] md:tracking-widest'>R</h1>
         <h1 className='text-[7rem] md:text-[10rem] lg:text-[14rem] font-playfair antialiased text-teal-100 leading-relaxed font-black tracking-[25px] md:tracking-widest'>O</h1>
         <h1 className='text-[7rem] md:text-[10rem] lg:text-[14rem] font-playfair antialiased text-teal-100 leading-relaxed font-black tracking-[25px] md:tracking-widest'>W</h1>
       </div>
 
-      <div id='hero_plant' className='plant z-15 fixed top-[47%] left-[20%] md:top-[40%] md:left-[25%] lg:top-[43%] lg:left-[30%]'>
+      <div id='hero_plant' className='plant z-15 absolute top-[47%] left-[20%] md:top-[40%] md:left-[25%] lg:top-[43%] lg:left-[30%]'>
         <img src={plant} alt="" className='h-60 lg:h-96 md:h-80 opacity-96' />
       </div>
 
@@ -151,25 +151,25 @@ function Header() {
         }} className='ri-close-circle-fill cursor-pointer absolute top-10 right-10 text-teal-500 text-3xl hover:text-teal-800 hover:duration-1000'></i>
 
         <ul id='nav-links' className='flex flex-col gap-12 mt-8 m-6 p-10 text-left pt-20 text-white text-2xl'>
-        <li className='border rounded-lg border-teal-500 group'>
-          <h1 className='text-teal-300 p-2 font-serif tracking-wider uppercase border md:text-[1.2rem] hover:text-teal-100 border-teal-500 text-center cursor-pointer rounded-lg hover:bg-teal-800 transition-all duration-500'>Home <span><i class="group-hover:text-teal-100 transition-all duration-500 text-teal-500 ri-home-4-line"></i></span></h1>
+        <li className='border rounded-lg border-teal-500'>
+          <h1 className='text-teal-300 p-2 font-serif tracking-wider uppercase group border md:text-[1.2rem] hover:text-teal-100 border-teal-500 text-center cursor-pointer rounded-lg hover:bg-teal-800 transition-all duration-500'>Home <span><i class="group-hover:text-teal-100 transition-all duration-500 text-teal-300 ri-home-4-line"></i></span></h1>
           <p className='p-6 text-center text-[1rem] text-teal-100'>Discover our mission to celebrate and protect the wonders of nature.</p>
           </li>
 
-          <li className='border rounded-lg border-teal-500 group'>
-            <h1 className='text-teal-300 p-2 font-serif tracking-wider uppercase border md:text-[1.2rem] hover:text-teal-100 border-teal-500 text-center cursor-pointer rounded-lg hover:bg-teal-800 transition-all duration-500'>Conservation <span><i class="group-hover:text-teal-100 transition-all duration-500 text-teal-500 ri-seedling-line"></i>
+          <li className='border rounded-lg border-teal-500'>
+            <h1 className='text-teal-300 p-2 font-serif tracking-wider uppercase group border md:text-[1.2rem] hover:text-teal-100 border-teal-500 text-center cursor-pointer rounded-lg hover:bg-teal-800 transition-all duration-500'>Conservation <span><i class="group-hover:text-teal-100 transition-all duration-500 text-teal-300 ri-seedling-line"></i>
             </span></h1>
             <p className='p-4 text-center text-[1rem] text-teal-100'>Learn about our efforts to preserve biodiversity and natural habitats.</p>
           </li>
 
-          <li className='border rounded-lg border-teal-500 group'>
-            <h1 className='text-teal-300 p-2 font-serif tracking-wider uppercase border md:text-[1.2rem] hover:text-teal-100 border-teal-500 text-center cursor-pointer rounded-lg hover:bg-teal-800 transition-all duration-500'>Sustainability <span><i class="group-hover:text-teal-100 transition-all duration-500 text-teal-500 ri-recycle-line"></i>
+          <li className='border rounded-lg border-teal-500'>
+            <h1 className='text-teal-300 p-2 font-serif tracking-wider uppercase group border md:text-[1.2rem] hover:text-teal-100 border-teal-500 text-center cursor-pointer rounded-lg hover:bg-teal-800 transition-all duration-500'>Sustainability <span><i class="group-hover:text-teal-100 transition-all duration-500 text-teal-300 ri-recycle-line"></i>
             </span></h1>
             <p className='p-4 text-center text-[1rem] text-teal-100'>Join us in adopting sustainable practices to protect the Earth.</p>
           </li>
 
-          <li className='border rounded-lg border-teal-500 group'>
-            <h1 className='text-teal-300 p-2 font-serif tracking-wider uppercase border md:text-[1.2rem] hover:text-teal-100 border-teal-500 text-center cursor-pointer rounded-lg hover:bg-teal-800 transition-all duration-500'>Wild-Life <span><i class="group-hover:text-teal-100 transition-all duration-500 text-teal-500 ri-bear-smile-line"></i>
+          <li className='border rounded-lg border-teal-500'>
+            <h1 className='text-teal-300 p-2 font-serif tracking-wider uppercase group border md:text-[1.2rem] hover:text-teal-100 border-teal-500 text-center cursor-pointer rounded-lg hover:bg-teal-800 transition-all duration-500'>Wild-Life <span><i class="group-hover:text-teal-100 transition-all duration-500 text-teal-300 ri-bear-smile-line"></i>
             </span></h1>
             <p className='p-4 text-center text-[1rem] text-teal-100'>Explore the diverse species that inhabit our planet and how to protect them.</p>
           </li>

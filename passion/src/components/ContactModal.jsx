@@ -33,11 +33,8 @@ function ContactModal() {
     
     const isOpen = useSelector((state) => state.isOpen);
     
-    console.log(isOpen);
-    
-  
 
-    //   if (!isOpen) return null; 
+      if (!isOpen) return null; 
     
   return (
     
