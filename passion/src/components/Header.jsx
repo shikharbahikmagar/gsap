@@ -4,7 +4,7 @@ import gsap from 'gsap';
 import logo from '../assets/logo.png';
 import ReactPlayer from 'react-player';
 import hero_video from '../assets/videos/herobg.mp4';
-import audio from '../assets/audio/audio.mp3';
+import audio from '../assets/audio/rain.mp3';
 import { useGSAP } from '@gsap/react';  
 import { useDispatch } from 'react-redux';
 import { openModal } from '../redux/ModalSlice.jsx';
@@ -153,17 +153,16 @@ const controlMusic = () => {
         }}
       />
 
-      <div className=' z-50 fixed bottom-10 right-10'>
+      <div className='z-50 fixed bottom-10 right-10'>
       <audio
         ref={audioRef}
-        src={audio} // Replace with the path to your audio file
-        autoPlay // Set to 'true' if you want the music to start playing as soon as the component loads
-        loop={true} // Set to 'true' if you want the music to loop  // Set to 'true' if you want the music muted initially
+        src={audio} 
+        loop={true} 
         muted={false}
-        style={{ position: 'absolute', zIndex: 9999, top: 0, left: 0 }}
+
       />
-       <button onClick={controlMusic} title='play music' className='text-white bg-teal-500 p-2 rounded-full'>
-       { playMusic? <i  class="ri-pause-circle-line text-3xl"></i> : <i class="ri-play-circle-line text-3xl"></i> }
+       <button onClick={controlMusic} title='play music' className='text-white bg-teal-500 p-3 rounded-full'>
+       { playMusic? <i  class="ri-pause-circle-line text-4xl"></i> : <i class="ri-play-circle-line text-3xl"></i> }
       </button>
 
       </div>
