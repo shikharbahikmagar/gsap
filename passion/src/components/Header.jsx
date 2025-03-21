@@ -1,9 +1,10 @@
 import React, { useState, useRef } from 'react';
 import "@fontsource/playfair-display";
 import gsap from 'gsap';
-import hero_bg from '../assets/hero_bg.png';
 import logo from '../assets/logo.png';
-import plant from '../assets/plant.png';
+import ReactPlayer from 'react-player';
+import hero_video from '../assets/videos/herobg.mp4';
+import audio from '../assets/audio/audio.mp3';
 import { useGSAP } from '@gsap/react';  
 import { useDispatch } from 'react-redux';
 import { openModal } from '../redux/ModalSlice.jsx';
@@ -14,9 +15,13 @@ function Header() {
 
   const dispatch = useDispatch();
 
+  const [playMusic, setPlayMusic] = useState(false);
+
   const [menuOpen, setMenuOpen] = useState(false);
 
   const vernav = useRef(null);
+
+  const audioRef = useRef(null);
 
   useGSAP(() => {
   
@@ -95,30 +100,87 @@ function Header() {
     // });
       
      
-  }, []);  // Empty dependency array ensures this runs once on component mount
+  }, []);
+
+//play audio
+const controlMusic = () => {
+
+  setPlayMusic(!playMusic);
+  playMusic ? audioRef.current.pause() : audioRef.current.play();
+}
+
+//pause audio
+
+  console.log(playMusic);
+  
 
   return (
     <>
 
     <ContactModal />
+    {/* style={{ backgroundImage: `url(${hero_bg})` }} */}
 
-    <div className="bg-cover bg-center !w-screen h-screen overflow-hidden" style={{ backgroundImage: `url(${hero_bg})` }}>
-           
-      <div className="absolute h-full w-full right-0 top-0 bg-sky-950 opacity-50 z-20" onClick={() => {setMenuOpen(false)}}></div>
+    <div className="bg-cover relative top-0 left-0 !w-screen h-screen overflow-hidden m-0 p-0">
+
+    <div className="absolute backdrop-blur-xl h-full w-full right-0 top-0 bg-slate-500 opacity-20 z-20" onClick={() => {setMenuOpen(false)}}></div>
+      {/* video background */}
+      <ReactPlayer
+        url={hero_video}
+        playing={true}
+        loop={true}
+        width="100%"
+        height="100%"
+        muted={true}
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          zIndex: 10,
+          margin: 0,
+          padding: 0,
+         
+        }}
+        config={{
+          file: {
+            attributes: {
+              style: {
+                objectFit: 'cover',
+                width: '100%',
+                height: '100%',
+              }
+            }
+          }
+        }}
+      />
+
+      <div className=' z-50 fixed bottom-10 right-10'>
+      <audio
+        ref={audioRef}
+        src={audio} // Replace with the path to your audio file
+        autoPlay // Set to 'true' if you want the music to start playing as soon as the component loads
+        loop={true} // Set to 'true' if you want the music to loop  // Set to 'true' if you want the music muted initially
+        muted={false}
+        style={{ position: 'absolute', zIndex: 9999, top: 0, left: 0 }}
+      />
+       <button onClick={controlMusic} title='play music' className='text-white bg-teal-500 p-2 rounded-full'>
+       { playMusic? <i  class="ri-pause-circle-line text-3xl"></i> : <i class="ri-play-circle-line text-3xl"></i> }
+      </button>
+
+      </div>
 
       {/* contact modal */}
 
       
-      <div id='hero_text' className='flex absolute z-5 top-[45%] left-[5%] md:top-[38%] md:left-[12%] lg:top-[38%] lg:left-[15%]'>
+      {/* <div id='hero_text' className='flex absolute z-5 top-[45%] left-[5%] md:top-[38%] md:left-[12%] lg:top-[38%] lg:left-[15%]'>
         <h1 className='text-[7rem] md:text-[10rem] lg:text-[14rem] font-playfair antialiased text-teal-100 leading-relaxed font-black tracking-[25px] md:tracking-widest'>G</h1>
         <h1 className='text-[7rem] md:text-[10rem] lg:text-[14rem] font-playfair antialiased text-teal-100 leading-relaxed font-black tracking-[25px] md:tracking-widest'>R</h1>
         <h1 className='text-[7rem] md:text-[10rem] lg:text-[14rem] font-playfair antialiased text-teal-100 leading-relaxed font-black tracking-[25px] md:tracking-widest'>O</h1>
         <h1 className='text-[7rem] md:text-[10rem] lg:text-[14rem] font-playfair antialiased text-teal-100 leading-relaxed font-black tracking-[25px] md:tracking-widest'>W</h1>
-      </div>
+      </div> */}
 
-      <div id='hero_plant' className='plant z-15 absolute top-[47%] left-[20%] md:top-[40%] md:left-[25%] lg:top-[43%] lg:left-[30%]'>
+      {/* <div id='hero_plant' className='plant z-15 absolute top-[47%] left-[20%] md:top-[40%] md:left-[25%] lg:top-[43%] lg:left-[30%]'>
         <img src={plant} alt="" className='h-60 lg:h-96 md:h-80 opacity-96' />
-      </div>
+      </div> */}
 
     
       {/* nav bar */}
