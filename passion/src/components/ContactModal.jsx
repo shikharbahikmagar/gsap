@@ -68,7 +68,7 @@ function ContactModal() {
                    <input
                       id="name"
                       type="text"
-                      placeholder="John Doe"
+                      placeholder="your name"
                       className="w-full p-3 border border-teal-800 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-300 focus:border-teal-500 transition-all bg-transparent focus:text-white placeholder:text-slate-400 text-white"
                       />
                 </div>
