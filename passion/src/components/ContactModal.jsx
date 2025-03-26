@@ -64,6 +64,7 @@ function ContactModal() {
             <form className="space-y-6 mt-6 w-full">
              <div className="space-y-4">
                 <div>
+                  
                    <label htmlFor="name" className="block text-sm font-medium text-white mb-1">Full Name</label>
                    <input
                       id="name"
