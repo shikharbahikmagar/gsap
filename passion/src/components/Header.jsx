@@ -87,13 +87,13 @@ function Header() {
       .to('#menu-icon', { y: 0, opacity: 1, stagger: 0.2, ease: 'power3.out' }, '-=0.5');
     
     // const hang_plant_element = hang_plant_ref.current;
-    gsap.from('#hero_text h1', { 
-      x: -800, 
-      opacity: 0, 
-      duration: 1, 
-      stagger: 0.2,
-      delay: 0.5 
-    });
+    // gsap.from('#hero_text h1', { 
+    //   x: -800, 
+    //   opacity: 0, 
+    //   duration: 1, 
+    //   stagger: 0.2,
+    //   delay: 0.5 
+    // });
     // //mouseover effect
     // hang_plant_element.addEventListener('mouseover', () => {
     //   gsap.to(hang_plant_ref, { rotate: 360, duration: 1 });
@@ -111,7 +111,7 @@ const controlMusic = () => {
 
 //pause audio
 
-  console.log(playMusic);
+  //console.log(playMusic);
   
 
   return (
