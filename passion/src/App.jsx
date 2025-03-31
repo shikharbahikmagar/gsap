@@ -2,6 +2,7 @@ import Header from "./components/Header"
 import Conservation from "./components/Conservation"
 import Tiger from "./components/Tiger"
 import Cursor from "./components/Cursor"
+import Plant from "./components/Plant"
 
 function App() {
 
@@ -10,7 +11,9 @@ function App() {
     <Cursor />
     <Header />
 
-    <Tiger />
+    <Plant />
+
+    {/* <Tiger /> */}
     {/* <Conservation /> */}
     </>
   )

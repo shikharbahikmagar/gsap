@@ -77,12 +77,7 @@ function Tiger() {
 
   return (
     <div className='min-h-full flex justify-center w-full object-cover relative'  
-     style={{
-      backgroundImage: `url(${bg_cons1})`,
-      backgroundSize: 'cover',       // Ensures the background image covers the whole div
-      backgroundPosition: 'center',  // Centers the background image
-      backgroundRepeat: 'no-repeat', // Prevents the image from repeating
-    }}>
+     >
         <div className='absolute h-full w-full backdrop-blur-sm'></div>
       <div onMouseEnter={handleMouseOver} onMouseLeave={handleMouseOut} className='card relative mx-8 my-28 h-full group rounded-2xl cursor-pointer overflow-hidden max-w-[500px]' >
 
