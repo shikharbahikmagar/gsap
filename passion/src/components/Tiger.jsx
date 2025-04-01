@@ -38,7 +38,6 @@ function Tiger() {
 
       x: 800,
       delay: .5,
-      stagger: true,
       opacity: 0,
       stagger: 0.2,
       duration: 1,
@@ -47,7 +46,6 @@ function Tiger() {
     .to('#wall', {
 
       filter: 'blur(8px)',
-      stagger: true,
       duration: 1,
     }, 0)
     
