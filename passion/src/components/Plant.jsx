@@ -1,10 +1,10 @@
 import React from 'react'
 import palm from '../assets/images/palm.png'
 import branch from '../assets/images/branch.png'
-import b1 from '../assets/images/birds/1.png'
-import b2 from '../assets/images/birds/2.png'
-import b3 from '../assets/images/birds/3.png'
-import b4 from '../assets/images/birds/4.png'
+import p1 from '../assets/images/plants/p1.png'
+import p2 from '../assets/images/plants/p2.png'
+import p3 from '../assets/images/plants/p3.png'
+import p4 from '../assets/images/plants/p4.png'
 
 
 
@@ -22,13 +22,13 @@ function Plant() {
         <p className='text-white pt-8 font-sans tracking-[1px] leading-7' style={{wordSpacing: '10px'}}>Afforestation is the process of planting trees in areas that have not previously been forested, helping to restore ecosystems and combat climate change. It reduces carbon dioxide levels, enhances biodiversity, and improves soil quality. By creating new forests, afforestation also provides habitats for wildlife and helps prevent soil erosion. This practice is vital for maintaining a balanced and sustainable environment. Through afforestation, we can rebuild lost ecosystems and contribute to a healthier planet for future generations.</p>
 
         <div className='absolute flex  justify-centermt-4 mt-12'>
-            <img src={b1} className='max-h-[120px] bg-teal-800 rounded-full  p-2 bg-opacity-30' alt="" />
+            <img src={p1} className='max-h-[120px] bg-teal-800 rounded-full  p-2 bg-opacity-30 hover:bg-opacity-100 transition-all duration-1000 cursor-pointer' alt="" />
 
-            <img src={b2} className='max-h-[120px] bg-teal-800 mx-8 rounded-full  p-2 bg-opacity-30' alt="" />
+            <img src={p2} className='max-h-[120px] bg-teal-800 mx-8 rounded-full  p-2 bg-opacity-30 hover:bg-opacity-100 transition-all duration-1000 cursor-pointer' alt="" />
 
-            <img src={b3} className='max-h-[120px] bg-teal-800 mx-8 rounded-full  p-2 bg-opacity-30' alt="" />
+            <img src={p3} className='max-h-[120px] bg-teal-800 mx-8 rounded-full  p-2 bg-opacity-30 hover:bg-opacity-100 transition-all duration-1000 cursor-pointer' alt="" />
 
-            <img src={b4} className='max-h-[120px] bg-teal-800 mx-8 rounded-full  p-2 bg-opacity-30' alt="" />
+            <img src={p4} className='max-h-[120px] bg-teal-800 mx-8 rounded-full  p-2 bg-opacity-30 hover:bg-opacity-100 transition-all duration-1000 cursor-pointer' alt="" />
         </div>
         </div>
 
