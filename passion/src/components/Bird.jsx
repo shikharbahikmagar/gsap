@@ -158,7 +158,7 @@ function Bird() {
     <div className='fixed top-0 left-0 w-7 h-7 rounded-full bg-yellow-200 bg-opacity-50 z-40' ref={cursorRef}></div>
 
 
-    <div className='h-screen w-full relative flex bg-slate-300' id='bird-sec'>
+    <div className='h-screen w-full relative flex bg-green-800' id='bird-sec'>
       
      
 
