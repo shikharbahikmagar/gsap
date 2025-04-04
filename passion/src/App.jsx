@@ -4,6 +4,7 @@ import Tiger from "./components/Tiger"
 import Cursor from "./components/Cursor"
 import Plant from "./components/Plant"
 import Bird from "./components/Bird"
+import Test from "./components/Test"
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
     {/* <Conservation /> */}
 
     {/* <Tiger /> */}
+    <Test />
     </>
 
     

@@ -1,6 +1,6 @@
 import React, {useState, useRef} from 'react'
 import palm from '../assets/images/palm.png'
-import branch from '../assets/images/branch.png'
+import branch from '../assets/images/branch/branch3.png'
 import p1 from '../assets/images/plants/p1.png'
 import p2 from '../assets/images/plants/p2.png'
 import p3 from '../assets/images/plants/p3.png'
@@ -111,7 +111,7 @@ function Plant() {
 
 
   return (
-    <div className='h-screen w-full relative flex bg-green-800' id='plant-sec'>
+    <div className='h-screen w-full relative flex bg-green-900' id='plant-sec'>
         <div className='absolute max-w-[50%] left-[-100px] z-80'  id='tree'>
             <img src={branch} alt="" ref={treeRef}/>
         </div>
