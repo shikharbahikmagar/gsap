@@ -1,6 +1,4 @@
 import React, {useState, useRef, useEffect} from 'react'
-// import palm from '../assets/images/palm.png'
-// import branch from '../assets/images/branch.png'
 import b1 from '../assets/images/birds/1.png'
 import b2 from '../assets/images/birds/2.png'
 import b3 from '../assets/images/birds/3.png'
@@ -10,9 +8,8 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useGSAP } from '@gsap/react'
 import Lottie from 'lottie-react'
-import animationBird from '../assets/lottie/bird.json'
-import Cursor from './Cursor'
-import branch from '../assets/images/branch/branch4.png'
+import branch from '../assets/images/birds/bb1.png'
+import "@fontsource/playfair-display";
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -122,6 +119,24 @@ function Bird() {
 
     })
 
+    gsap.from("#bird-head", {
+      x: 1000,
+      opacity: 0,
+      delay: 3,
+      duration: 1.5,
+      ease: "power2.out",
+      stagger: 0.2,
+      scrollTrigger: {
+        trigger: "#bird-head",
+        start: "top 20%", // Animation starts when top of element reaches bottom of viewport
+        end: "top 5%",
+        scrub: 3,
+        pin: false,
+        markers: false,
+        toggleActions: "play reverse play reverse"
+      }
+    });
+
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: "#bird-img",
@@ -139,6 +154,7 @@ function Bird() {
       ease: "power2.out",
       stagger: 0.2
     }, "-=1");
+
 
   }, [])
 
@@ -180,10 +196,15 @@ function Bird() {
             <img src={b4} className='max-h-[120px] bg-teal-800 mx-8 rounded-full  p-2 bg-opacity-30 hover:bg-opacity-100 transition-all duration-1000 cursor-pointer' alt="" />
         </div>
         </div>
-        <div className='absolute max-w-[50%] top-0 -right-52 z-80'  id='bird' ref={birdRef}>
-           {/* <Lottie animationData={animationBird} className='max-w-[450px]'/> */}
-           <img src={branch} alt="" />
-        </div>
+
+       
+        <div className='absolute top-0 right-0 max-w-[50%]' id='bird-container'>
+                <h1 className='absolute text-[100px] text-white top-16 text-center font-bold right-96 z-10 font-playfair uppercase' id='bird-head'><span>Wings</span> <span>of</span> <span>Hope</span></h1>
+                <div className='relative z-20 top-20' id='bird' ref={birdRef}>
+                    {/* <Lottie animationData={animationBird} className='max-w-[450px]'/> */}
+                    <img src={branch} alt="" className='max-w-[500px]'/>
+                </div>
+            </div>
     </div>
     </>
   )

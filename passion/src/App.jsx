@@ -17,7 +17,7 @@ function App() {
 
     <Bird />
 
-    {/* <Tiger /> */}
+    <Tiger />
     {/* <Conservation /> */}
 
     {/* <Tiger /> */}

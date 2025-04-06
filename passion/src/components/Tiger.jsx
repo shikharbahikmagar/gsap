@@ -70,13 +70,73 @@ function Tiger() {
 
   }, [tigermouseover])
 
+  useGSAP(() => {
+
+    gsap.from("#vd-title", {
+      x: -100,
+      y: -100,
+      opacity: 0,
+      duration: 1.5,
+      scrollTrigger: {
+        trigger: "#vd-title",
+        start: "top 10%",
+        end: "top 5%",
+        scrub: 4,
+        pin: false,
+        markers: false,
+        toggleActions: "play reverse play reverse"
+      }
+    })
+    gsap.from("#vd-desc", {
+          x: 100,
+          y: -100,
+          opacity: 0,
+          duration: 1.5,
+          scrollTrigger: {
+            trigger: "#vd-desc",
+            start: "top 10%",
+            end: "top 5%",
+            scrub: 4,
+            pin: false,
+            markers: false,
+            toggleActions: "play reverse play reverse"
+          }
+        })
+
+        gsap.from("#vd-line", {
+          x: 1000,
+          opacity: 0,
+          duration: 1.5,
+          scrollTrigger: {
+            trigger: "#vd-line",
+            start: "top 40%",
+            end: "top 5%",
+            pin: false,
+            markers: false,
+            toggleActions: "play reverse play reverse"
+          }
+        })
+
+  })
+
+
  //console.log(tigermouseover);
   
 
   return (
-    <div className='min-h-full flex justify-center w-full object-cover relative'  
+    <>
+    <div className="w-full h-full bg-green-900 flex flex-col items-center justify-center p-4 py-4 text-center space-y-2">
+      <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-serif tracking-wide pt-40" id='vd-title'>Nature's Whisper</h1>
+      <p className="text-green-100 max-w-2xl text-lg md:text-xl font-light leading-relaxed" id='vd-desc'>
+        Immerse yourself in the beauty of nature with every frame. A serene escape that reminds us to slow down and appreciate the world around us.
+      </p>
+      <div className="mt-4 w-24 h-1 bg-green-400 rounded-full" id='vd-line'></div>
+    </div>
+      <div className='min-h-full flex justify-center w-full object-cover relative bg-green-900'  
      >
-        <div className='absolute h-full w-full backdrop-blur-sm'></div>
+     
+
+        <div className='absolute h-full w-full'></div>
       <div onMouseEnter={handleMouseOver} onMouseLeave={handleMouseOut} className='card relative mx-8 my-28 h-full group rounded-2xl cursor-pointer overflow-hidden max-w-[500px]' >
 
         <div className='absolute right-0 max-w-sm p-12 z-20 tiger-text' >
@@ -90,6 +150,8 @@ function Tiger() {
 
       <Conservation />
     </div>
+    </>
+    
   )
 }
 
