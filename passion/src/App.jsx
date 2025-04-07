@@ -20,8 +20,7 @@ function App() {
     <Tiger />
     {/* <Conservation /> */}
 
-    {/* <Tiger /> */}
-    {/* <Test /> */}
+    <Test />
     </>
 
     

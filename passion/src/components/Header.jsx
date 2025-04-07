@@ -152,7 +152,15 @@ const controlMusic = () => {
           }
         }}
       />
+      
 
+
+        {/* hero text */}
+        {/* <div className='flex absolute z-50 text-white top-0 left-0 w-full h-full flex-col'>
+          <p>ladfadlsf</p>
+        </div> */}
+
+      {/* audio background */}
       <div className='z-50 fixed bottom-10 right-10'>
       <audio
         ref={audioRef}
@@ -161,8 +169,8 @@ const controlMusic = () => {
         muted={false}
 
       />
-       <button onClick={controlMusic} title='play music' className='text-white bg-teal-500 p-3 rounded-full'>
-       { playMusic? <i  class="ri-pause-circle-line text-4xl"></i> : <i class="ri-play-circle-line text-3xl"></i> }
+       <button onClick={controlMusic} title='play music' className='text-white bg-teal-500 p-3 rounded-full z-50'>
+       { playMusic? <i  className="ri-pause-circle-line text-4xl z-50"></i> : <i className="ri-play-circle-line text-3xl z-50"></i> }
       </button>
 
       </div>

@@ -94,7 +94,7 @@ function Tiger() {
           duration: 1.5,
           scrollTrigger: {
             trigger: "#vd-desc",
-            start: "top 10%",
+            start: "top 40%",
             end: "top 5%",
             scrub: 4,
             pin: false,
@@ -125,9 +125,9 @@ function Tiger() {
 
   return (
     <>
-    <div className="w-full h-full bg-green-900 flex flex-col items-center justify-center p-4 py-4 text-center space-y-2">
-      <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-serif tracking-wide pt-40" id='vd-title'>Nature's Whisper</h1>
-      <p className="text-green-100 max-w-2xl text-lg md:text-xl font-light leading-relaxed" id='vd-desc'>
+    <div className="w-full h-full bg-green-900 flex flex-col items-center justify-center p-4 py-4 text-center space-y-6">
+      <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-serif tracking-wide" id='vd-title'>Nature's Whisper</h1>
+      <p className="text-white max-w-2xl text-lg md:text-xl font-light leading-relaxed" id='vd-desc'>
         Immerse yourself in the beauty of nature with every frame. A serene escape that reminds us to slow down and appreciate the world around us.
       </p>
       <div className="mt-4 w-24 h-1 bg-green-400 rounded-full" id='vd-line'></div>

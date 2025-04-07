@@ -128,7 +128,7 @@ function Bird() {
       stagger: 0.2,
       scrollTrigger: {
         trigger: "#bird-head",
-        start: "top 20%", // Animation starts when top of element reaches bottom of viewport
+        start: "top 30%", // Animation starts when top of element reaches bottom of viewport
         end: "top 5%",
         scrub: 3,
         pin: false,
